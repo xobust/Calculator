@@ -1,7 +1,7 @@
 Calculator
 ==========
 
-Simple Calculator i made for a forum [chalange](http://www.sweclockers.com/forum/10-programmering-och-digitalt-skapande/1309649-progblemet-10-miniraknare/)
+Simple Calculator i made for a forum [chalange](http://www.sweclockers.com/forum/10-programmering-och-digitalt-skapande/1309649-progblemet-10-miniraknare/). All the code comments are in swedish.
 
 
 ## Where is the source?
