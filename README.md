@@ -18,8 +18,6 @@ It works like this:
 
 
 ```psudo
-
-
 while output not empty
 
   if output.front is number
@@ -57,4 +55,4 @@ bool String2Double(const std::string& str, double& result) // bra string to numm
 
 ## Complexity
 
-The complexity sould be close to O(2N) 
+The complexity sould be close to O(2N) both shunting yard and the reverse polish calculation is linear.
