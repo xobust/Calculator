@@ -65,9 +65,7 @@ bool domath()
 	// popa operatorn och de senaste värdena
 	char c = output.front()[0];
 	output.pop();
-
 	cout << c << " ";
-
 	double a, b;
 
 	if(vals.empty())
@@ -75,7 +73,6 @@ bool domath()
 
 	b = vals.top(); // numren kommer i omvänd ordning 
 	vals.pop();
-
 
 	if(vals.empty()) // fix för negativa tal i början av en uträkning men inte senare
 		if(c=='-') 
@@ -87,7 +84,6 @@ bool domath()
 		a = vals.top();
 		vals.pop();
 	}
-
 
 	switch(c)
 	{
@@ -108,14 +104,12 @@ bool domath()
 		break;
 	}
 
-
 	return true;
 }
 
 //Infix till omvänd polsk notation
 int ToReversePolish(string exp)
 {
-
 	exp.erase(remove_if(exp.begin(), exp.end(), isspace), exp.end());
 
 	for(int i = 0; i < exp.length(); i++)
@@ -138,7 +132,6 @@ int ToReversePolish(string exp)
 				break;
 
 		}
-
 		if (isdigit(exp[i]))
 		{
 			string temp="";
@@ -188,12 +181,9 @@ int ToReversePolish(string exp)
 						break;
 					}
 				}
-
 				 oper.push(o1);
-
 			}
 		}
-		
 	}
 
 	while(oper.size() > 0)
@@ -209,10 +199,8 @@ int ToReversePolish(string exp)
 double calculate(string str)
 {
 	ToReversePolish(str);
-
 	cout << "Reverse polish result: ";
-
-	while(output.size() > 0)
+	while(!output.empty())
 	{
 		string s = output.front();
 		if(s.length() > 1 || isalnum(s[0])) // om det är ett nummer lägg det på nummer stacken
@@ -231,7 +219,6 @@ double calculate(string str)
 	}
 
 	cout << "= \n";
-	
 	return vals.top();
 }
 
@@ -241,7 +228,6 @@ int main(int argc, _TCHAR* argv[])
 	string s;
 	cin>>s;
 	cout << calculate(s); 
-
 	getch();
 
 	return 0;
